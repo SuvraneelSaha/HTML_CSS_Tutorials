@@ -1,0 +1,56 @@
+html{
+  box-sizing: border-box;
+}
+
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+.containerparent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.container{
+  border: 10px solid black;
+  /* width: 620px; */
+  /* not needed the child elements will take the size accordingly */
+}
+  
+
+.item{
+  border: 5px solid palevioletred;
+  width: 100%;
+  padding: 1rem;
+ background-color: pink;
+}
+
+.container{
+  display: grid;
+  grid-template-rows: 100px 300px 100px;
+  grid-template-columns: 3fr 1fr ;
+  gap: 1rem;
+  grid-template-areas: 
+  'header header'
+  'main aside'
+  'footer footer';
+  /* each single quote is row 
+  and inside of it is columns */
+  /* grid-template-areas - no need to keep record of line numbers */
+}
+.item-1{
+  grid-area: header;
+}
+
+.item-2{
+  grid-area: main;
+}
+
+.item-3{
+  grid-area: aside;
+}
+
+.item-4{
+  grid-area: footer;
+}

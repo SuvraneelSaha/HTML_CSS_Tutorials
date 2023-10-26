@@ -1,0 +1,37 @@
+html{
+  box-sizing: border-box;
+}
+
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+.containerparent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.container{
+  border: 10px solid black;
+  width: 620px;
+  /* not needed the child elements will take the size accordingly */
+}
+  
+
+.item{
+  border: 5px solid palevioletred;
+  width: 100%;
+  padding: 1rem;
+ background-color: pink;
+}
+
+.container{
+  display: grid;
+ 
+  grid-template-rows: repeat(4,100px);
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr))
+
+ 
+}
+/* responsive without media queries just using auto-fit and  minmaax */
