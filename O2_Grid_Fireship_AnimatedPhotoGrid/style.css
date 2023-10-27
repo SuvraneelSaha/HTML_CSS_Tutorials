@@ -1,0 +1,20 @@
+.animated-grid-parent{
+  display: flex;
+  /* flex-wrap: wrap;
+  flex-direction: row; */
+  gap: 5rem;
+}
+
+.para{
+  width: 10rem; 
+  
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+.animated-grid{
+  flex-grow: 1;
+  
+}
