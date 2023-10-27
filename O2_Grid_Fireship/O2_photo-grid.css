@@ -1,0 +1,32 @@
+.photo-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* as we have an implicit grid like this the row sizing will be done 
+  by the css only if we want to change that behaviour then we can use 
+  grid-auto-rows */
+
+  grid-auto-rows: 240px;
+}
+
+@media screen and (min-width:600px) {
+.card-tall {
+  grid-row: span 2 / auto;
+  /* grid-row : start / end  */
+  /* will span multiple rows vertically  */
+  /* explicitly: 
+  grid-row : 1 / 4  */
+}
+
+.card-wide{
+  grid-column: span 2 / auto;
+  /* just like grid-row */
+}
+
+/* as smaller sizes ie resizing the layout of the items is bad specially on the right side items  */
+ }
+
+ /*  classes will do nothing on smaller screen sizes and will 
+ only be applied if the min-width is greater than 600px */
+ /* until and unless the screen size gets bigger than 600px then 
+ and then only these two css rules will be applied otherwise no sizing will be changed  */
