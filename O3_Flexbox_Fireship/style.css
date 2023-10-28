@@ -1,0 +1,40 @@
+html{
+  box-sizing: border-box;
+}
+
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.blue{
+  /* text-align: center; */
+  background-color: aqua;
+  width: 100px;
+}
+.red{
+  /* text-align: center; */
+  background-color: rgb(208, 82, 82);
+  width: 100px;
+  
+  
+  /* i guess the flex property works when there is  an explicit sizing given to each element or item */
+}
+.yellow{
+  /* text-align: center; */
+  background-color: yellowgreen;
+  width: 100px;
+}
+
+.wrapper{
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
