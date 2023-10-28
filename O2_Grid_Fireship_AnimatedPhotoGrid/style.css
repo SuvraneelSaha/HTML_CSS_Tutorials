@@ -15,7 +15,7 @@ p{
   padding: 0;
 }
 .animated-grid{
-  flex-grow: 1;
+  flex:3;
   
 }
 /* Needs lots of lots of grid practice and flexbos practice and also understanding in depth by 
