@@ -200,3 +200,57 @@ tempLiList.forEach(function nigga(li) {
 })
 
 // undefined
+
+document.getElementsByClassName("list-item")
+
+// HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+const tempClassList = document.getElementsByClassName("list-item")
+// undefined
+
+tempClassList.forEach(function (li) {
+    console.log(li);
+})
+
+// VM370:1 Uncaught TypeError: tempClassList.forEach is not a function
+//     at <anonymous>:1:15
+// (anonymous) @ VM370:1
+
+tempClassList
+
+// HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+Array.from(tempClassList);
+
+// (4) [li.list-item, li.list-item, li.list-item, li.list-item]0: li.list-item1: li.list-item2: li.list-item3: li.list-itemlength: 4[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+
+const myConvertedArray = Array.from(tempClassList);
+// undefined
+
+// HOW tO CONVERT html collection into an array 
+// uisng Array.from(tempClassList);
+
+
+myConvertedArray.forEach(function listyle(li) {
+  li.style.color="orange";
+})
+// it will work now 
+
+document.querySelectorAll("h2")
+
+// NodeList(15) [h2.vector-pinnable-header-label, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2, h2]
+
+const allH2 = document.querySelectorAll("h2")
+//  undefined 
+
+allH2[2].innerText;
+// 'Trademark'
+
+
+allH2.forEach(function (h) {
+  h.style.color="red";
+  h.style.backgroundColor="green";
+  h.style.padding="10px";
+  h.innerText = "NIGGA";
+})
+// undefined
