@@ -1,3 +1,7 @@
+:root{
+  --yellow:#ffc600;
+}
+
 html{
   box-sizing: border-box;
 }
@@ -8,7 +12,7 @@ html{
 
 body{
   background-image: url("./images/topography.svg"),
-    linear-gradient(110deg, #f93d66, #6d47d9);
+  linear-gradient(130deg, #f93d66, #6d47d9);
     /* background-size: 340px, auto; */
   /* min-height: calc(100vh - 100px); */
   /* margin: 50px; */
@@ -16,6 +20,23 @@ body{
   /* background-attachment: fixed; */
   /* letter-spacing: 10px; */
   
+}
+
+.heading{
+  text-align: center;
+  width: 30rem;
+  margin: 0 auto;
+  color: var(--yellow);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.input-output{
+  width: 30rem;
+  height: 5rem;
+  background: black;
+  font-size: 4rem;
+  color: white;
 }
 
 .btn{
@@ -26,12 +47,33 @@ body{
   border-radius: 99px;
   margin: 0.5rem;
   font-weight: bold;
-  border: 1px solid ;
+  border: 1px solid white;
+  color: white;
+}
+.btn-color{
+  background: black;
+}
+.btn-color-special{
+  background: rgb(224,116,32);
+  background: linear-gradient(137deg, rgba(224,116,32,1) 0%, rgba(9,9,121,1) 51%, rgba(255,0,9,1) 100%);
+  border-color: black;
+}
+.btn-color-equals{
+  background-color: var(--yellow);
+  border-color: black;
+  color: black;
 }
 
+.btn:hover{
+  scale: 1.2;
+  /* z-index: 5; */
+  /* z-index is used for the overlapping images and elements 
+  explanation given in  doc  */
+}
 .row-flex{
   display: flex;
   flex-direction: row;
+  /* default value of flex-direction is row  */
 }
 
 .calculator_wrapper{
@@ -39,5 +81,53 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* width: 30rem; */
+  /* margin: 0 auto 0 auto; */
+  border: 1px solid black;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem; 
+  border-radius: 99px;
+
+}
+
+.sidebar{
+  margin-bottom: 4rem;
+  /* width: 30rem; */
+  /* width is given in the li elements */
+  margin-left: 1rem;
+}
+
+.sidebar-ul{
+  /* width: 30rem; */
+  flex-basis: 30%;
+
+  /*  */
+  /* margin-bottom: 4rem; */
+  /* we want to make the margin from the bottom not from the containing div  */
+}
+.calculator_wrapper{
+  flex-basis: 70%;
   
+}
+
+ul{
+  padding: 0;
+}
+
+.sidebar-ul > li {
+  list-style-type:none;
+  color: white;
+  font-size: 2rem;
+  margin: 1rem;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 99px;
+  width: 30rem;
+  text-align: center;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+
 }
